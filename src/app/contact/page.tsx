@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-8">
       <div>
-        <Breadcrumbs items={[{ name: 'Home', url: '/' }, { name: 'Contact' }]} />
+        <Breadcrumbs items={[{ name: 'Home', url: '/' }, { name: 'Contact', url: '' }]} />
         <h1 className="font-serif text-4xl mb-6">Contact Planet Eye</h1>
         <address className="not-italic space-y-4 mb-8">
           <p><strong>Address:</strong> 52/1, 935, 28th Main Rd, Putlanpalya, Jayanagara 9th Block, Bengaluru 560069</p>

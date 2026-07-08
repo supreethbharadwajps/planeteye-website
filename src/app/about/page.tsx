@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
-      <Breadcrumbs items={[{ name: 'Home', url: '/' }, { name: 'About' }]} />
+      <Breadcrumbs items={[{ name: 'Home', url: '/' }, ]} />
       <h1 className="font-serif text-4xl mb-6">About Planet Eye</h1>
       <div className="grid md:grid-cols-2 gap-8">
         <div>

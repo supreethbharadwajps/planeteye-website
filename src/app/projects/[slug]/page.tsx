@@ -11,8 +11,9 @@ export async function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const project = projects.find((p) => p.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
   if (!project) return { title: 'Project Not Found' };
   return {
     title: `${project.name} – Managed Farmland near Bangalore | Planet Eye`,
@@ -21,13 +22,14 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const project = projects.find((p) => p.slug === params.slug);
+export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
   if (!project) notFound();
 
   return (
     <>
-      <Breadcrumbs items={[{ name: 'Home', url: '/' }, { name: 'Projects', url: '/projects' }, { name: project.name }]} />
+      <Breadcrumbs items={[{ name: 'Home', url: '/' }, { name: 'Projects', url: '' }]} />
       {/* TL;DR box */}
       <div className="max-w-7xl mx-auto px-4 py-4 bg-white shadow rounded mb-4 mt-4">
         <div className="flex flex-wrap gap-4 text-sm">

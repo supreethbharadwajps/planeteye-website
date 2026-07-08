@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import EnquiryFormInline from './EnquiryFormInline'; // a compact form variant
+import EnquiryFormInline from '../layout/EnquiryFormInline'; // a compact form variant
 
 const slides = [
   {

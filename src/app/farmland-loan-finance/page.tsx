@@ -7,7 +7,7 @@ export const metadata = { title: 'Farmland Loan & EMI – Planet Eye', descripti
 export default function LoanPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
-      <Breadcrumbs items={[{ name: 'Home', url: '/' }, { name: 'Farmland Loan & EMI' }]} />
+    
       <h1 className="font-serif text-4xl mb-6">Farmland Loan & EMI Options</h1>
       <div className="grid md:grid-cols-2 gap-8">
         <div>

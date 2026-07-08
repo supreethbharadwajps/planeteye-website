@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import EnquiryFormInline from './EnquiryFormInline'
+import Link from 'next/link';
 
 const slides = [
   { image: '/banner_forest_new.jpg', headline: 'Own Managed Farmland Near Bangalore', sub: 'Eco-friendly farm plots with luxury amenities' },

@@ -47,7 +47,6 @@ export default function EnquiryFormInline() {
           <a
             href="https://wa.me/919845011779"
             target="_blank"
-            rel="noopener noreferrer"
             className="inline-block mt-3 text-gold underline"
           >
             Chat on WhatsApp →
@@ -55,6 +54,7 @@ export default function EnquiryFormInline() {
         </div>
       ) : (
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+          {/* Honeypot */}
           <input
             type="text"
             {...register('honeypot')}

@@ -18,7 +18,7 @@ const reviewSchema = {
 export default function TestimonialsPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <Breadcrumbs items={[{ name: 'Home', url: '/' }, { name: 'Testimonials' }]} />
+     <Breadcrumbs items={[{ name: 'Home', url: '/' }, { name: 'Testimonials', url: '' }]} />
       <SchemaScript schema={reviewSchema} />
       <h1 className="font-serif text-4xl mb-8">Client Testimonials</h1>
       <div className="space-y-6">

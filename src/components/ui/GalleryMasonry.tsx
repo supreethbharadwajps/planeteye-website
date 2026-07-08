@@ -10,7 +10,7 @@ interface GalleryImage {
 export default function GalleryMasonry({ images }: { images: GalleryImage[] }) {
   const [filter, setFilter] = useState('All');
   const filtered = filter === 'All' ? images : images.filter((img) => img.project === filter);
-  const projects = [...new Set(images.map((i) => i.project))];
+  const projects = Array.from(new Set(images.map((i) => i.project)));
 
   return (
     <div>
